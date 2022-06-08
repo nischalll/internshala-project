@@ -3,9 +3,12 @@ const mongoose = require("mongoose");
 const { Table } = require("./modules/table");
 const cors = require('cors');
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
+// console.log(PORT); 
 app.use(cors());
 app.use(express.json());
+
+
 
 const DB =
   "mongodb+srv://pass:pass@cluster0.hxx9cg7.mongodb.net/project?retryWrites=true&w=majority";
